@@ -20,13 +20,18 @@ jobs:
       with:
         r-version: '4.1'
         use-public-rspm: true
+    
+    - name: Set up Pandoc
+      run: |
+        sudo apt-get update
+        sudo apt-get install pandoc
 
     - name: Install packages
       run: |
         R -e 'install.packages(c("shiny", "shinydashboard", "shinydashboardPlus", "DT", "rmarkdown"))'
 
     - name: Build Shiny App
-      run: Rscript build.R
+      run: R -e "rmarkdown::render('index.Rmd', output_format = 'html_document')"
 
     - name: Rename HTML file
       run: mv index.html docs
