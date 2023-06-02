@@ -28,7 +28,7 @@ jobs:
       
     - name: Install dependencies
       run: |
-        R -e 'install.packages(c("shiny", "shinydashboard", "shinydashboardPlus", "DT", "ggplot2", "rmarkdown"), repos = "https://cloud.r-project.org")'
+        R -e 'install.packages(c("shiny", "shinydashboard", "shinydashboardPlus", "DT", "ggplot2", "rmarkdown", "markdown"), repos = "https://cloud.r-project.org")'
 
     - name: Build Shiny App
       run: R -e 'rmarkdown::render("app.R", output_format = "html_document", output_file = "docs/index.html")'
