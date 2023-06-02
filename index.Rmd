@@ -1,0 +1,15 @@
+---
+runtime: shiny
+output:
+  html_document:
+    self_contained: false
+---
+
+```{r}
+shinyAppDir(
+  system.file("app.R", package = "shiny"),
+  options = list(
+    host = "0.0.0.0",
+    port = 8080
+  )
+)
