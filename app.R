@@ -5,10 +5,10 @@
 library(shiny)
 library(shinydashboard)
 library(shinydashboardPlus)
-library(leaflet)
+#library(leaflet)
 library(DT)
 library(ggplot2)
-library(plotly)
+#library(plotly)
 library(markdown)
 
 
