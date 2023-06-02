@@ -13,7 +13,7 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.token }}
+        token: ${{ secrets.shiny }}
       
     - name: Set up R
       uses: r-lib/actions/setup-r@v2
