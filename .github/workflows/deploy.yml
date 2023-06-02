@@ -26,8 +26,7 @@ jobs:
         R -e 'install.packages(c("shiny", "shinydashboard", "shinydashboardPlus", "DT", "rmarkdown"))'
 
     - name: Build Shiny App
-      run: |
-        R -e 'rmarkdown::render("index.Rmd", output_format = "html_document", pandoc_args = c("--metadata", "pandoc-version=2.11.4"))'
+      run: Rscript build.R
 
     - name: Rename HTML file
       run: mv index.html docs
