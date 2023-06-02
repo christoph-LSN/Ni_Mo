@@ -5,7 +5,7 @@
 library(shiny)
 library(shinydashboard)
 library(shinydashboardPlus)
-library(leaflet)
+#library(leaflet)
 library(DT)
 library(ggplot2)
 #library(plotly)
@@ -44,8 +44,7 @@ ui <- dashboardPage(
                 column(width = 12,
                        tabBox(
                          tabPanel("Tabelle", dataTableOutput("tabelle_bevoelkerung")),
-                         tabPanel("Diagramm", plotOutput("diagramm_bevoelkerung")),
-                         tabPanel("Karte", leafletOutput("karte_bevoelkerung"))
+                         tabPanel("Diagramm", plotOutput("diagramm_bevoelkerung"))
                        )
                 )
               ),
@@ -59,8 +58,7 @@ ui <- dashboardPage(
       tabItem(tabName = "bevoelkerungsstand",
               tabBox(
                 tabPanel("Tabelle", dataTableOutput("tabelle_unterseite1")),
-                tabPanel("Diagramm", plotOutput("diagramm_unterseite1")),
-                tabPanel("Karte", leafletOutput("karte_unterseite1"))
+                tabPanel("Diagramm", plotOutput("diagramm_unterseite1"))
               ),
               h3("Erläuterungen"),
               verbatimTextOutput("erl_bevoelkerungsstand")
@@ -68,8 +66,7 @@ ui <- dashboardPage(
       tabItem(tabName = "kinderbetreuung",
               tabBox(
                 tabPanel("Tabelle", dataTableOutput("tabelle_unterseite2")),
-                tabPanel("Diagramm", plotOutput("diagramm_unterseite2")),
-                tabPanel("Karte", leafletOutput("karte_unterseite2"))
+                tabPanel("Diagramm", plotOutput("diagramm_unterseite2"))
               ),
               h3("Erläuterungen"),
               verbatimTextOutput("erl_kinderbetreuung")
